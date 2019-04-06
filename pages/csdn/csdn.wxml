@@ -1,0 +1,84 @@
+<view class='page'>
+  <view class='page_hd'>
+    <!--搜索组件-->
+    <view class="weui-search-bar">
+      <!--搜索框-->
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <!--输入框icon-->
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <!--输入框-->
+          <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+          <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+          <icon class="weui-icon-search" type="search" size="14"></icon>
+          <view class="weui-search-bar__text">搜索</view>
+        </label>
+      </view>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+    </view>
+    <view class="weui-tab">
+      <scroll-view scroll-x='true' class='scroll_tabs'>
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{item.id}}" class="navbar_item {{activeIndex == item.id ? 'bar_item_on' : ''}}" bindtap="tabClick">{{item.name}}</view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+  <view class='page_bd'>
+    <view class="tab_panel">
+      <view class="tab_content web" hidden="{{activeIndex != 'web'}}">
+        <block wx:for='{{articles[0]}}' wx:key="{{item.title}}">
+          <template is="article" data="{{...item}}"></template>
+        </block>
+      </view>
+      <view class="tab_content career" hidden="{{activeIndex != 'career'}}">
+        <block wx:for='{{articles[1]}}' wx:key="{{item.title}}">
+          <template is="article" data="{{...item}}"></template>
+        </block>
+      </view>
+      <view class="tab_content arch" hidden="{{activeIndex != 'arch'}}">
+        <block wx:for='{{articles[2]}}' wx:key="{{item.title}}">
+          <template is="article" data="{{...item}}"></template>
+        </block>
+      </view>
+      <view class="tab_content lang" hidden="{{activeIndex != 'lang'}}">
+        <block wx:for='{{articles[3]}}' wx:key="{{item.title}}">
+          <template is="article" data="{{...item}}"></template>
+        </block>
+      </view>
+      <view class="tab_content game" hidden="{{activeIndex != 'game'}}">
+        <block wx:for='{{articles[4]}}' wx:key="{{item.title}}">
+          <template is="article" data="{{...item}}"></template>
+        </block>
+      </view>
+      <view class="tab_content db" hidden="{{activeIndex != 'db'}}">
+        <block wx:for='{{articles[5]}}' wx:key="{{item.title}}">
+          <template is="article" data="{{...item}}"></template>
+        </block>
+      </view>
+      <view class="tab_content mobile" hidden="{{activeIndex != 'mobile'}}">
+        <block wx:for='{{articles[6]}}' wx:key="{{item.title}}">
+          <template is="article" data="{{...item}}"></template>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class="page_fd">
+  </view>
+</view>
+<template name="article">
+  <view class="weui-panel">
+    <view class="weui-media-box weui-media-box_text">
+      <view class="weui-media-box__title weui-media-box__title_in-text">{{title}}</view>
+      <view class="weui-media-box__desc">{{desc}}</view>
+      <view class="weui-media-box__info">
+        <view class="weui-media-box__info__meta">{{time}}</view>
+        <view class="weui-media-box__info__meta weui-media-box__info__meta_extra">{{views}} 阅读</view>
+      </view>
+    </view>
+  </view>
+</template>

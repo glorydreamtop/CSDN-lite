@@ -1,0 +1,23 @@
+ {
+  "pages":[
+    "pages/csdn/csdn",
+    "pages/logs/logs",
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/csdn/csdn",
+      "text": "CSDN"
+    },
+    {
+      "pagePath": "pages/index/index",
+      "text": "主页"
+    }]
+  }
+}

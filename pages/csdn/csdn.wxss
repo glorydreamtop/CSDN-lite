@@ -1,0 +1,28 @@
+.weui-search-bar,.page_fd{
+  background-color: rgb(226, 10, 10);
+  border: 0rpx;
+}
+.page_bd{
+  background-color: white;
+  height: 940rpx;
+}
+
+.navbar_item{
+  display: inline-block;
+  margin-left: 20rpx;
+  height: 60rpx;
+  font-size: 16px;
+  
+}
+.bar_item_on{
+  color: #09bb07;
+}
+.scroll_tabs{
+  width: 100%;
+  overflow-x: scroll;
+  white-space:nowrap;
+  border-bottom: 4rpx solid black;
+}
+.weui-panel{
+  margin-top: 0;
+}
