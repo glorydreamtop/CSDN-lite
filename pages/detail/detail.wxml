@@ -1,0 +1,6 @@
+<view class='page'>
+  <view class='page_hd'>
+    <web-view src='https://blog.csdn.net/qing_gee/article/details/88923634'></web-view>
+
+    </view>
+</view>

@@ -60,6 +60,7 @@ Page({
             views: res.data.articles[i].views,
             url: res.data.articles[i].url
           };
+          //检测当前浏览专题
           switch (that.data.activeIndex) {
             case 'web':
               var j = 0;
@@ -98,6 +99,7 @@ Page({
       activeIndex: e.currentTarget.id
     });
     let theclass = '.' + e.currentTarget.id;
+    //文章列表节点高度为0则表示未加载
     wx.createSelectorQuery().select(theclass).boundingClientRect(function(rect) {
       if (rect.height === 0) {
         that.getArticles();
