@@ -1,14 +1,10 @@
 {
-  "pages": [
-    "pages/csdn/csdn",
-    "pages/blog/article-detail",
-    "pages/logs/logs",
-    "pages/index/index"
-  ],
+  "usingComponents": {},
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+    
   }
 }

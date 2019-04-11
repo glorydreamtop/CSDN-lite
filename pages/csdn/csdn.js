@@ -58,7 +58,7 @@ Page({
             time: res.data.articles[i].created_at,
             nickname: res.data.articles[i].nickname,
             views: res.data.articles[i].views,
-            url: res.data.articles[i].url
+            url: res.data.articles[i].url.replace('article/details','wx/article/details')
           };
           //检测当前浏览专题
           switch (that.data.activeIndex) {
@@ -106,8 +106,18 @@ Page({
       }
     }).exec();
   },
+  //获取时间戳
   getTime() {
     var date = new Date();
     return date.getTime();
+  },
+  //打开详情页
+  todetail(e){
+    var array = e.currentTarget.dataset.url.split('/')
+    var username=array[3]
+    var articleid=array[7]
+    wx.navigateTo({
+      url: '../blog/article-detail?username='+username+'&articleid='+articleid,
+    })
   }
 })
