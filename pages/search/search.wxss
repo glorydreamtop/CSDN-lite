@@ -1,0 +1,6 @@
+/* pages/search.wxss */
+@import '../../weui.wxss'
+.weui-search-bar{
+  background-color: rgb(226, 10, 10);
+  border: 0rpx;
+}

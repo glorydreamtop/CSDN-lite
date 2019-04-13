@@ -32,7 +32,8 @@ Page({
       []
     ],
     viewArticles: [],
-    activeIndex: 'web'
+    activeIndex: 'web',
+    ifsearch:false
   },
   onLoad() {
     this.getArticles();
@@ -118,6 +119,11 @@ Page({
     var articleid=array[7]
     wx.navigateTo({
       url: '../blog/article-detail?username='+username+'&articleid='+articleid,
+    })
+  },
+  tosearch(){
+    wx.navigateTo({
+      url: '../search/search',
     })
   }
 })

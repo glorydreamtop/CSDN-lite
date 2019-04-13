@@ -2,7 +2,7 @@
   "pages": [
     "pages/csdn/csdn",
     "pages/blog/article-detail",
-    "pages/logs/logs",
+    "pages/search/search",
     "pages/index/index"
   ],
   "window": {

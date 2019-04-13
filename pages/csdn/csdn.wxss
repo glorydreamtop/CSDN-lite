@@ -1,7 +1,4 @@
-.weui-search-bar,.page_fd{
-  background-color: rgb(226, 10, 10);
-  border: 0rpx;
-}
+
 
 .navbar_item{
   display: inline-block;
