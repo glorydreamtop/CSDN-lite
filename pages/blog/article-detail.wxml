@@ -1,6 +1,6 @@
 <view class='page'>
   <view class='page_hd'>
-    <web-view src='https://blog.csdn.net/{{username}}/wx/article/details/{{articleid}}'></web-view>
+    <web-view src='https://blog.csdn.net/{{userName}}/wx/article/details/{{articleId}}'></web-view>
 
     </view>
 </view>

@@ -5,8 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    username:'',
-    articleid:'',
+    userName:'',
+    articleId:'',
 
   },
 
@@ -15,8 +15,8 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      username:options.username,
-      articleid:options.articleid
+      userName:options.userName,
+      articleId:options.articleId
     })
   },
 

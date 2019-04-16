@@ -31,7 +31,6 @@ Page({
       [],
       []
     ],
-    viewArticles: [],
     activeIndex: 'web',
     ifsearch:false
   },
@@ -115,15 +114,15 @@ Page({
   //打开详情页
   todetail(e){
     var array = e.currentTarget.dataset.url.split('/')
-    var username=array[3]
-    var articleid=array[7]
+    var userName=array[3]
+    var articleId=array[7]
     wx.navigateTo({
-      url: '../blog/article-detail?username='+username+'&articleid='+articleid,
+      url: '../blog/article-detail?userName='+userName+'&articleId='+articleId,
     })
   },
-  tosearch(){
-    wx.navigateTo({
-      url: '../search/search',
+  inputShowed(e){
+    this.setData({
+      ifsearch:e.detail
     })
   }
 })

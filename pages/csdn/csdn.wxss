@@ -1,12 +1,9 @@
-
-
 .navbar_item{
   display: inline-block;
   margin-left: 20rpx;
   height: 60rpx;
   font-size: 16px;
   background-color: transparent;
-  
 }
 .bar_item_on{
   color: rgb(226, 10, 10);

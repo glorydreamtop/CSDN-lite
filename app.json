@@ -3,6 +3,7 @@
     "pages/csdn/csdn",
     "pages/blog/article-detail",
     "pages/search/search",
+    "pages/logs/logs",
     "pages/index/index"
   ],
   "window": {

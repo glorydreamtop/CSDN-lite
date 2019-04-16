@@ -1,7 +1,7 @@
 <view class='page'>
   <view class='page_hd'>
     <!--搜索组件-->
-    <search></search>
+    <search bind:inputShowed='inputShowed'></search>
     <!--专题Tab-->
     <view class="weui-tab" hidden='{{ifsearch}}'>
       <scroll-view scroll-x='true' class='scroll_tabs'>
@@ -49,9 +49,7 @@
           <template is="article" data="{{...item}}"></template>
         </block>
       </view>
-    </view>
-  </view>
-  <view class="page_fd">
+    </view>    
   </view>
 </view>
 <template name="article">

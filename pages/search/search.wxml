@@ -1,17 +1,40 @@
 <!--pages/search.wxml-->
-<view class="weui-search-bar">
-  <view class="weui-search-bar__form">
-    <view class="weui-search-bar__box">
-      <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
-      <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" confirm-type='search' bindconfirm='searchnow' />
-      <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
-        <icon type="clear" size="14"></icon>
+<view>
+  <view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+        <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" confirm-type='search' bindconfirm='searchnow' />
+        <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+          <icon type="clear" size="14"></icon>
+        </view>
+      </view>
+      <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+        <icon class="weui-icon-search" type="search" size="14"></icon>
+        <view class="weui-search-bar__text">搜索1234</view>
+      </label>
+    </view>
+    <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+  </view>
+  <!--搜索详情页-->
+  <view class="tab_panel" hidden='{{!inputShowed}}'>
+    <view class="tab_content">
+      <block wx:for='{{searchdetails}}' wx:key="{{item.title}}">
+        <template is="searchdetail" data="{{...item}}"></template>
+      </block>
+    </view>
+  </view>
+</view>
+
+<template name="searchdetail">
+  <view class="weui-panel" data-url='{{url}}' bindtap='searchtodetail'>
+    <view class="weui-media-box weui-media-box_text">
+      <view class="weui-media-box__title weui-media-box__title_in-text">{{title}}</view>
+      <view class="weui-media-box__desc">{{desc}}</view>
+      <view class="weui-media-box__info">
+        <view class="weui-media-box__info__meta">{{time}}</view>
+        <view class="weui-media-box__info__meta weui-media-box__info__meta_extra">{{views}} 阅读</view>
       </view>
     </view>
-    <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
-      <icon class="weui-icon-search" type="search" size="14"></icon>
-      <view class="weui-search-bar__text">搜索1234</view>
-    </label>
   </view>
-  <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
-  </view>
+</template>
