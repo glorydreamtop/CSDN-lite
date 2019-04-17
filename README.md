@@ -17,4 +17,4 @@
 比如CSDN（百度可以搜到CSDN开放平台，但是进不去网站），没有很方便的APi，但是官方也有小程序，可以抓包获取部分信息，抓包过程发现，文章详情页是用webview承载，使用了和官方相同的变量名即可使用官方的webview页面。
 # GIF演示
 推荐一款录屏转gif的小工具，开源地址：[ScreenToGif GitHub]('https://github.com/NickeManarin/ScreenToGif')，提供国内的一个[下载地址]('https://itlao5.com/wp/tools/ScreenToGif2.14.1.rar')。
-![CSDN-lite演示]("./CSDN-lite演示.gif")
+![CSDN-lite演示]("https://github.com/glorydreamtop/CSDN-lite/blob/master/CSDN-lite%E6%BC%94%E7%A4%BA.gif")
